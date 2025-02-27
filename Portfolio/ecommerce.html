@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Kirsten Osborne</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">My Portfolio</a></li>
+							<li><a href="about.html">About Me</a></li>
+							<li><a href="work.html">Work Experience</a></li>
+							<li class="active"><a href="ecommerce.html">P1</a></li>
+							<li><a href="bookclub.html">P2</a></li>
+							<li><a href="prototype.html">P3</a></li>
+							<li><a href="registration.html">P4</a></li>
+							<li><a href="personal.html">P5</a></li>
+							<li><a href="puzzle.html">P6</a></li>	
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/kirsten-osborne/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/KirstenO09" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<h1>Gizmo Galaxy</h1>
+									<p>I collaborated with a team to develop an Electronics E-commerce <br />website called Gizmo Galaxy for selling electronics.</p>
+								</header>
+								<div class="image main"><img src="images/GG_home.png" alt="" /></div>
+								<p>The e-commerce website is designed to provide a seamless and user-friendly interface, ensuring adequate user experience, 
+									as it features multiple interconnected pages that cater to diverse user needs. We used Visual Studio Code to build our e-commerce website which contained a sign-in/sign-out page, 
+									home page, profile page, about us page, trade-in page, shop page, cart page, and order confirmation page. </p>
+								
+									<ul class="alt">
+										<li>The sign-in/sign-out page allows users to create an account or login with their credentials such as full name, email, and password.</li>
+										<li>The home page serves as a central hub, welcoming users with an aesthetically pleasing and engaging interface showcasing featured products.</li>
+										<li>The profile page includes a personalized space for registered users to view and manage their account details and order history, which improves the user experience by adding a layer of personalization.</li>
+										<li>The shop page is the core of the website, as it presents each product with the option to add it to the cart.</li>
+										<li>The cart page enables users to review the selected items they chose, modify quantities, enter shipping and payment information, view their order summary, and proceed to checkout.</li>
+										<li>After the user has completed a purchase, the order confirmation page is displayed with a detailed summary of their transaction which includes the order ID, order date, product name, product quantity, product price, shipping, subtotal, and total.</li>
+									</ul>
+							
+								<p>Overall, this comprehensive design enhances usability and ensures intuitive, efficient, and enjoyable user experience while supporting a variety of shopping and trading options to meet customer needs. </p>
+						
+								<h2>Frontend Development</h2>
+								<p>During the development of the front-end of the website, we used HTML for client-side functionality and included CSS and Bootstrap stylesheets to create a cohesive and visually appealing design. 
+									HTML formed the structure for all pages while CSS and Bootstrap provided predefined stylesheets which were used to create a visually appealing and consistent responsive design throughout the whole website. 
+									These stylesheets were integrated to expedite the design process by leveraging its predefined classes and components for key features such as navigation menus, buttons, forms, and made them mobile-friendly. 
+									CSS helped improve customization of the website design by applying custom styles, such as typography, color schemes, and layout adjustments, tailored to the brand’s identity. </p>
+								<p>JavaScript played a crucial role in enhancing interactivity in the trade-in page functionalities where users can receive estimated trade-in values for their used electronics. 
+									JavaScript contributed to the seamless interaction by validating inputs, calculating estimates, and updating the displayed results dynamically without requiring page reloads. 
+									Although PHP was employed on the back end which will further be explained, it also played an important role in connecting the front-end interface to the server-side functionality. 
+									For instance, it successfully handled form submissions from the sign-in, sign-out, shop, cart, and trade-in pages, validating user inputs and ensuring secure communication with the database. 
+									By seamlessly integrating these programing languages, we created a front-end that was not only visually appealing and user-friendly, but also tightly connected with the back-end processes, resulting in a cohesive and efficient e-commerce website. </p>
+								
+								<h2>Backend Development</h2>
+								<p>To develop our backend system, we used XAMPP and phpMyAdmin for creating our database to manage product listings, users accounts, cart items, trade-ins, and orders efficiently. 
+									We selected XAMPP, which provided a local server environment to develop and test the website on a local machine. 
+									XAMPP provides an integrated setup with Apache for the web server and MySQL for the database, making it efficient to manage both backend and database components in one platform. </p>
+								<p>We utilized phpMyAdmin for database management, allowing us to create, modify, and query the MySQL database through a user-friendly interface. 
+									This tool simplified database operations such as managing tables, handling data inserts and executing SQL queries, which streamlined development and testing. 
+									Our MySQL database called “tables” in phpMyAdmin contained several essential tables including a user's table, products table, cart items table, orders and order items table. </p>
+								
+								<hr>
+
+								<h2>Database MySQL Tables</h2>
+
+
+								<h3>User Table</h3>
+							
+<pre><code>CREATE TABLE users (
+	user_id INT AUTO_INCREMENT PRIMARY KEY, 	
+	full_name VARCHAR(100) NOT NULL, 				
+	email VARCHAR(100) UNIQUE NOT NULL, 				
+	password VARCHAR(255) NOT NULL, 				
+	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP); 
+</code></pre>
+							<p>The users table holds user data, including user IDs, usernames, hashed passwords, and email addresses. The fields such as user ID, full name, email, and password are fundamental for user management. 
+							The created_at timestamp field is used to help track user registration dates.  </p>	
+
+
+							<h3>Products Table</h3>
+							
+<pre><code>INSERT INTO products (product_id, name, category, price, image_url) VALUES 
+	(1, 'Gizmo Phone', 'Smartphones', 799.99, 'img/genericsmartphone.jpg'), 
+	(2, 'Gizmo Watch', 'Wearables', 399.99, 'img/mockup2.jpeg'), 
+	(3, 'Gizmo Tablet', 'Tablets', 899.99, 'img/mockup3.png'), 
+	(4, 'Gizmo Headphones', 'Audio', 69.99, 'img/mockup4.png'), 
+	(5, 'Gizmo Buds', 'Audio', 39.99, 'img/mockup5.png'), 
+	(6, 'Gizmo Speaker', 'Audio', 49.99, 'img/mockup6.webp'), 
+	(7, 'Gizmo TV', 'Television', 1029.99, 'img/mockup8.png'); 				
+</code></pre>
+							<p>The product table contains our e-commerce catalog and stores each product’s details, including product ID, name, category, price, and image URL. These are used for displaying products and managing inventory. 
+								The sample data that is inserted into the products table shows various electronic products including phones, watches, and audio devices.    </p>
+								
+
+							<h3>Cart Items Table</h3>
+
+<pre><code>CREATE TABLE cart_items ( 
+    cart_id INT PRIMARY KEY AUTO_INCREMENT, 
+    user_id INT, 
+    product_id INT NOT NULL, 
+    quantity INT NOT NULL DEFAULT 1, 
+    FOREIGN KEY (product_id) REFERENCES products(product_id)); 
+</code></pre>
+							<p>We created the cart items table to track items that users add to their carts, with each record linking a cart ID and user ID to a specific product ID and quantity.</p>	
+
+
+							<h3>Order Table</h3>
+
+<pre><code>CREATE TABLE orders ( 
+    order_id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id INT, 
+    total_amount DECIMAL(10, 2), NOT NULL 
+    order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE); 
+</code></pre>
+							<p>The order table is included to record completed orders with information on order ID, user ID, total amount, and order date timestamp.  </p>
+
+
+							<h3>Order Items Table</h3>
+
+<pre><code>CREATE TABLE order_items ( 
+    order_item_id INT AUTO_INCREMENT PRIMARY KEY, 
+    order_id INT, 
+    product_id INT, 
+    quantity INT NOT NULL, 
+    price DECIMAL(10, 2) NOT NULL, 
+    FOREIGN KEY (order_id) REFERENCES orders(order_id) ON DELETE CASCADE, 
+    FOREIGN KEY (product_id) REFERENCES products(product_id) ON DELETE CASCADE); 
+</code></pre>
+							<p>The order items table maintains a detailed record of each product within an order, by capturing an order item ID, product ID, quantity, and price at the time of purchase. 
+								The data in this table will also be used on the profile page for the users order history.</p>
+
+								<h3>Trade-in Table</h3>
+
+<pre><code>CREATE TABLE trade_in ( 
+    trade_in_id INT AUTO_INCREMENT PRIMARY KEY, 
+    user_id INT, 
+    device_name VARCHAR(100) NOT NULL, 
+    trade_in_value DECIMAL(10, 2) NOT NULL, 
+    trade_in_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE); 
+</code></pre>
+							<p>The trade-in table manages the device trade-in program as it tracks traded devices, their value, and associated users. 
+								It links customers to their traded devices through the user ID, and records essential information such as trade-in ID, device name, trade-in value, and trade-in date timestamp.</p>
+
+							<hr>
+							<h2>Functionality Requirements</h2>
+							<p>Dynamic Content generation was implemented in pages by using PHP scripts to dynamically populate the content based on user action such as adding items to cart or database queries. 
+								This is done by using PHP to fetch product data from the products table and display it in a structured format on the page. For example, the shop page displays product listings which are retrieved from the products table in the database, 
+								and then dynamically generated on the cart page as cart items after the user adds the item to cart. These cart items are then temporarily stored in the cart items table. 
+								Dynamically generating and updating cart content, enables users to view and modify their cart contents with immediate feedback. </p>
+
+
+							<p>We also tested design elements such as navigation menus, add-to-cart alerts, and product categorization to ensure a smooth and intuitive checkout process. 
+								For the trade-in functionality, PHP processed the user inputs that were received from JavaScript and queried the database to calculate accurate trade-in values based on predefined amounts. 
+								The results were then returned to the front-end interface via AJAX calls, ensuring a smooth user experience. On the profile page, PHP queried the orders table to retrieve a logged-in user’s past order. 
+								This data was then displayed in a user-friendly format, with order details like products purchased, total amount, and order dates. </p>
+
+							<h2>Security Measures handled with PHP</h2>
+							<p>Given the nature of the project, as it is not a real website, we intentionally excluded tables that would handle sensitive data, such as shipping and credit card information. 
+								Only basic user and order information were included to reflect typical e-commerce functionality for security reasons. 
+								To further handle server-side logic, we had to incorporate a PHP-based backend for handling server requests, such as processing orders and handling user interactions.
+								This includes managing user authentication by using PHP to handle sign-in and sign-out functionality by validating user credentials against the data stored in the user table. 
+								The passwords were also securely hashed using PHP’s password hashing functions, such as password_hash() and verified them with password_verify(). 
+								PHP is used for order processing to validate the cart details and user inputs, calculate the total cost, and update the orders table with the order data, during checkout to ensure integrity of the order process. 
+								After successfully processing the order, PHP clears the relevant entries from the cart items table to maintain data integrity. Using PHP ensured that all data sent to the server is validated to prevent SQL injection attacks and other vulnerabilities (). 
+								Prepared statements with parameterized queries (PDO or MySQLi) were used to interact with the database securely. </p>
+
+							<hr>
+							<h2>Gizmo Galaxy Demo</h2>
+							
+							<div class="video-container">
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/bwZ1DHg6BIQ?si=3optwLQgaz8mCkUa&autoplay=1&mute=1" title="YouTube video player" frameborder="0" 
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+							</div>
+
+							
+							<i>For privacy reasons, this demo does not include audio.</i>
+							
+							<br/>
+							<b>Feel free to view this project in <a href="https://github.com/KirstenO09/GizmoGalaxy" target="_blank" rel="noopener noreferrer">Github</a>!</b>
+							</section>
+
+							<footer>
+								<div class="pagination">
+									<a href="work.html" class="previous">Prev</a>
+									<a href="about.html" class="page">2</a>
+									<a href="work.html" class="page">3</a>
+									<a href="ecommerce.html" class="page active">4</a>									
+									<span class="extra">&hellip;</span>
+									<a href="registration.html" class="page">7</a>
+									<a href="personal.html" class="page">8</a>
+									<a href="puzzle.html" class="page">9</a>									
+									<a href="bookclub.html" class="next">Next</a>
+								</div>
+							</footer>
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+						
+					<section class="contact-info">
+									
+						<h3>Phone</h3> 
+						<p><a href="tel:2485952531">(248) 595-2531 </a></p>
+						
+						<hr>
+						<h3>Email</h3>
+						<p><a href="mailto:okirsten2@gmail.com">okirsten2@gmail.com</a></p>
+						
+						<hr>
+						<h3>Social</h3>
+						<ul class="icons alt">
+							<li><a href="https://www.linkedin.com/in/kirsten-osborne/" target="_blank" rel="noopener noreferrer" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="https://github.com/KirstenO09" target="_blank" rel="noopener noreferrer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>	
+										
+					</section>
+
+				</footer>
+
+			<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>&copy; Kirsten Osborne</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
